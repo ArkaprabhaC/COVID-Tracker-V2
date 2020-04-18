@@ -22,21 +22,23 @@ class News extends React.Component {
    render(){
        return (
            <div>
-               <p className="news-header font-weight-light" style={{fontSize: "18px"}}>Global News (source: BBC)</p>       
+               <p className="news-header font-weight-light text-center" style={{fontSize: "18px"}}>Global News (source: BBC)</p>       
                     {this.state.news.length !== 0 ? 
                         this.state.news.slice(0,5).map((item,index)=>{
                             return (
-                                    <div className="card mb-2" key={item+index} >
+                                <a href={item.url} className="click-item" rel="noopener noreferrer" target="_blank" key={item+index}  >
+                                    <div className="card card-news mb-2" >
                                         <div className="card-body p-2">
-                                            <a href={item.url}>
                                                 <p className="m-0">{item.title}</p>
-                                            </a>
                                         </div>
                                     </div>
+                                </a>
                             );             
                     }) 
                     :  <Loader css={this.override} size={50} color={"#123abc"} loading={true} />}
-                  <p className="font-weight-light text-muted mt-3 text-center news-api-attribution">Powered by <a rel="noopener noreferrer" target="_blank" href="http://newsapi.org">NewsAPI</a></p>  
+                  <p className="font-weight-light text-muted mt-3 text-center news-api-attribution">Powered by 
+                        <a rel="noopener noreferrer" target="_blank" href="http://newsapi.org"> NewsAPI</a>
+                  </p>  
            </div>
        );
    }

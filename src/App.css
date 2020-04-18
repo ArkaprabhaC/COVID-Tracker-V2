@@ -1,11 +1,10 @@
 body{
     font-family: 'Roboto', sans-serif;
-
     font-weight: 500;
 }
 .header-main{
-    font-size: 20px;
-    margin-top:35px;
+    font-size: 15px;
+    margin-top:37px;
    
 }
 .header-main span{
@@ -33,30 +32,8 @@ body{
 
 
 /**
-* FADE IN ANIMATION
+* FADE IN UP ANIMATION
 */
-
-.fadein-enter {
-    opacity: 0;
-    transform: translate(0%, 50%);
-    transition: all 300ms ease;      
-}
-    
-.fadein-enter.fadein-enter-active {
-    opacity:1;
-    transform: translate(0%, 0%); 
-}
-
-.fadein-exit {
-    opacity: 1;
-    transform: translate(0%, 0%);
-    transition: all 300ms ease;
-}
-    
-.fadein-exit.fadein-exit-active {
-    opacity:0;
-    transform: translate(0%, 50%); 
-}
 
 .fadeUp{
     animation-name: fade-up;
@@ -85,12 +62,12 @@ body{
   .footer-credits a:hover{
     text-decoration: none;
   }
-  .footer-ask-1:after{
+  .call-for-devs-1:after{
     content: '\2728';
     font-size:20px;
   }
 
-  .footer-ask-2:after{
+  .call-for-devs-2:after{
     content: '\1F604';
     font-size:20px;
   }

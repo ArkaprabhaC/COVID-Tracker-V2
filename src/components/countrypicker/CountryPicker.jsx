@@ -17,7 +17,7 @@ class CountryPicker extends React.Component {
 
     render(){
         return (
-                <select className="custom-select col-8 col-md-5 d-block mx-auto fadeUp" style={{animationDelay:"2.3s"}} onChange={(e)=>{this.props.handleChange(e.target.value)}}>
+                <select className="custom-select col-8 col-md-5 d-block mx-auto fadeUp" style={{animationDelay:"1.8s"}} onChange={(e)=>{this.props.handleChange(e.target.value)}}>
                     <option value='Global'>Global</option>
                     {this.state.countries.map((element,index) => {
                         return <option key={element+index} value={element}>{element}</option>

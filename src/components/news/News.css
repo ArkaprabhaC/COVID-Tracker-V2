@@ -1,6 +1,29 @@
+.card-news{
+    padding: 3px;
+    transition: all 0.3s ease;
+}
+
+.card-news:hover{
+    background-color: rgba(108,117,125,.12549);
+    text-decoration: none;
+    font-weight: 500;
+    color:#000;
+    
+}
+.click-item{
+    color: #50575c;
+}
+.click-item:hover{
+    text-decoration: none;
+}
+
+.news-api-attribution{
+    font-size: 13px;
+}
 .news-api-attribution a{
     font-weight: 500;
-    color: blue;
+    color: #343a40;
+    
 }
 .news-api-attribution a:hover{
     text-decoration: none;
