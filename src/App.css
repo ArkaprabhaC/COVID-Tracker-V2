@@ -74,3 +74,23 @@ body{
         transform: translateY(0%);
     }
   }
+
+
+  /*
+  * Footer styles
+  */
+  .footer-credits a{
+      color:inherit;
+  }
+  .footer-credits a:hover{
+    text-decoration: none;
+  }
+  .footer-ask-1:after{
+    content: '\2728';
+    font-size:20px;
+  }
+
+  .footer-ask-2:after{
+    content: '\1F604';
+    font-size:20px;
+  }

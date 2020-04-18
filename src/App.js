@@ -87,9 +87,11 @@ class App extends React.Component{
                          <News/>
                          <footer className="mt-5 footer">
                             <div className="container pt-3">
-                                <p className="text-center font-weight-light mb-0">By <span style={{"borderBottom":"2px solid black"}}>Arkaprabha Chatterjee</span></p>
-                                <p className="text-center font-weight-light mt-2">Drop a mail <a href="mailto:arkaprabha.chatterjee31@gmail.com">
-                                    here</a> if you wish to collaborate.</p>
+                                <p className="text-center font-weight-light mb-4 footer-credits">By <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/arkaprabha-chatterjee-83483a167/"><span style={{"borderBottom":"2px solid black"}}>Arkaprabha Chatterjee</span></a></p>
+                                <p className="text-center font-weight-light mt-2 mb-0 footer-ask-1">Want to improve this app? </p>
+                                <p className="text-center font-weight-light mt-1 footer-ask-2">I would love to talk to you! </p>
+                                <p className="text-center font-weight-light mt-0">Drop a mail <a rel="noopener noreferrer" target="_blank" href="mailto:arkaprabha.chatterjee31@gmail.com">
+                                    here</a></p>
                             </div>
                         </footer>
                     </div>         

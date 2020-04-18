@@ -1,0 +1,7 @@
+.news-api-attribution a{
+    font-weight: 500;
+    color: blue;
+}
+.news-api-attribution a:hover{
+    text-decoration: none;
+}
