@@ -81,7 +81,7 @@ class Card extends React.Component {
                             </div>
                             
                         </div>
-                        <div className="col-md-4 col-9 mb-0 mb-3 px-2">
+                        <div className="col-md-4 col-9 mb-3 px-2">
                         
                             <div className="card">
                                 <div className="card-body p-3 deaths">
