@@ -1,26 +1,104 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Card,Chart,CountryPicker,News} from './components/index';
+import {getGlobalStats,getGlobalDaily, getCountryStats, getCountryHistory} from './api/api';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    state = {
+        stats: {},
+        daily: [],
+        country: '',
+        load: false
+    }
+  
+    async componentDidMount(){
+        this.handleGlobalData();
+    }
+    
+    handleGlobalData = async () => {
+        const data = await getGlobalStats(); 
+        const dailyData = await getGlobalDaily();
+        
+        this.setState({
+            stats: data,
+            daily: dailyData,
+            load: true
+        });
+    }
+
+    handleCountryChange = async (country) => {
+        
+        if(country===""){
+            this.handleGlobalData();
+        }else{
+            const data = await getCountryStats(country);
+            const dailyData = await getCountryHistory(country);
+            
+            this.setState({
+                stats:data,
+                daily: dailyData,
+                country: country
+            });
+        }
+
+    }
+    
+     
+    getUTCTime = () => {
+        const date = new Date(this.state.stats.updated);
+        const UTCHour = date.getUTCHours();
+        const UTCMins = date.getUTCMinutes();
+
+        const hours = UTCHour < 10 ? '0'+UTCHour : UTCHour;
+        const mins = UTCMins < 10 ? '0'+UTCMins : UTCMins;
+
+        return `${hours}:${mins} UTC`;
+           
+    }
+    render(){
+        return(
+            <div className="container-xl">
+                <div className="row">
+
+                    <div className="col-md-8 col-12 stage-1">
+                           
+                            <div className="row fadeUp" style={{animationDelay:"1.5s"}}>
+                                <div className="col-8">
+                                    <h2 className="text-left header-main font-weight-bold">
+                                        <span className="p-2">COVID 19</span>
+                                    </h2>
+                                </div>
+                                <div className="col-4 text-muted text-right lastUpdated">
+                                    <p className="m-0">Last Updated</p> 
+                                    <p className="m-0">{new Date(this.state.stats.updated).toDateString()}</p>
+                                    <p className="m-0">{this.getUTCTime()}</p>
+                                </div>
+                            </div>
+                           
+
+                               
+                            <Card stats = {this.state.stats} />  
+                            {/* Add key to card component to trigger remounting */}
+                            <CountryPicker handleChange={this.handleCountryChange} />
+                            <Chart stats = {this.state.stats} daily={this.state.daily} />
+                            
+                        
+                    </div>
+                    
+                    <div className="col-md-4 col-12 stage-2 fadeUp" style={{animationDelay:"1.2s"}}>
+                         <News/>
+                         <footer className="mt-5 footer">
+                            <div className="container pt-3">
+                                <p className="text-center font-weight-light mb-0">By <span style={{"borderBottom":"2px solid black"}}>Arkaprabha Chatterjee</span></p>
+                                <p className="text-center font-weight-light mt-2">Drop a mail <a href="mailto:arkaprabha.chatterjee31@gmail.com">
+                                    here</a> if you wish to collaborate.</p>
+                            </div>
+                        </footer>
+                    </div>         
+                </div>
+            </div> 
+        );
+    }
 }
 
 export default App;

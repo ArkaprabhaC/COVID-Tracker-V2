@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 500;
+}
+.header-main{
+    font-size: 20px;
+    margin-top:35px;
+   
+}
+.header-main span{
+    border: 3px solid rgba(0,0,0,0.4);
+}
+.lastUpdated{
+    font-size:12px;
+    margin-top:20px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stage-2{
+    position:fixed;
+    left:64%;
+    padding-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media screen and (max-width:769px){
+    .stage-2{
+        position: relative;
+        left:0;
+    }
+}
+
+
+
+/**
+* FADE IN ANIMATION
+*/
+
+.fadein-enter {
+    opacity: 0;
+    transform: translate(0%, 50%);
+    transition: all 300ms ease;      
+}
+    
+.fadein-enter.fadein-enter-active {
+    opacity:1;
+    transform: translate(0%, 0%); 
+}
+
+.fadein-exit {
+    opacity: 1;
+    transform: translate(0%, 0%);
+    transition: all 300ms ease;
+}
+    
+.fadein-exit.fadein-exit-active {
+    opacity:0;
+    transform: translate(0%, 50%); 
+}
+
+.fadeUp{
+    animation-name: fade-up;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%  {
+        opacity: 1;
+        transform: translateY(0%);
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
