@@ -18,7 +18,7 @@ class App extends React.Component{
     handleGlobalData = async () => {
         const data = await getGlobalStats(); 
         const dailyData = await getGlobalDaily();
-        console.log("global data is",dailyData);
+        
         this.setState({
             stats: data,
             daily: dailyData,

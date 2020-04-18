@@ -56,7 +56,7 @@ const Chart = (props) => {
                 (<div className="fadeUp" style={{animationDelay:"1.6s"}}>
                    
                     <div className="chart-container col-md-8 col-12 mx-auto" style={{height:"11rem"}}>
-                        <p className="font-weight-light text-center" style={{fontSize:"20px"}}>Daily Infection Chart</p>
+                        <p className="font-weight-light text-center" style={{fontSize:"20px"}}>Cumulative Infection Rate</p>
                         <Line
                             data={{
                                 labels: [...Object.keys(props.daily.cases)],  //indicates data in x direction! //label accepts array
@@ -75,7 +75,7 @@ const Chart = (props) => {
                     </div>
 
                     <div className=" chart-container col-md-8 col-12 mx-auto" style={{height:"11rem"}}>
-                        <p className=" font-weight-light text-center" style={{fontSize:"20px"}}>Daily Deaths Chart</p>
+                        <p className=" font-weight-light text-center" style={{fontSize:"20px"}}>Cumulative Death Rate</p>
                         <Line
                             data={{
                                 labels: [...Object.keys(props.daily.deaths)],  //indicates data in x direction! //label accepts array
@@ -93,7 +93,7 @@ const Chart = (props) => {
                     </div>
                     
                     <div className="col-md-8 col-12 mx-auto" style={{height:"11rem"}}>
-                        <p className=" font-weight-light text-center" style={{fontSize:"20px"}}>Daily Recovered Chart</p>
+                        <p className=" font-weight-light text-center" style={{fontSize:"20px"}}>Cumulative Recovery Rate</p>
                         {props.daily.recovered[Object.keys(props.daily.recovered)[0]] !== 0 ? 
                               (  <Line
                                     data={{
