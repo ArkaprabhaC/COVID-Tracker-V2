@@ -6,7 +6,7 @@ import './App.css';
 class App extends React.Component{
     state = {
         stats: {},
-        daily: [],
+        daily: {},
         country: '',
         load: false
     }
@@ -18,7 +18,7 @@ class App extends React.Component{
     handleGlobalData = async () => {
         const data = await getGlobalStats(); 
         const dailyData = await getGlobalDaily();
-        
+        console.log("global data is",dailyData);
         this.setState({
             stats: data,
             daily: dailyData,
@@ -28,7 +28,7 @@ class App extends React.Component{
 
     handleCountryChange = async (country) => {
         
-        if(country===""){
+        if(country==="Global"){
             this.handleGlobalData();
         }else{
             const data = await getCountryStats(country);
@@ -76,10 +76,8 @@ class App extends React.Component{
                             </div>
                            
 
-                               
+                            <CountryPicker handleChange={this.handleCountryChange} />   
                             <Card stats = {this.state.stats} />  
-                            {/* Add key to card component to trigger remounting */}
-                            <CountryPicker handleChange={this.handleCountryChange} />
                             <Chart stats = {this.state.stats} daily={this.state.daily} />
                             
                         

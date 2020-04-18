@@ -22,7 +22,7 @@ class News extends React.Component {
                <p className="news-header">News (source: BBC)</p>       
                     {this.state.news.slice(0,5).map((item,index)=>{
                         return (
-                                <div className="card mb-2 fadeUp" >
+                                <div className="card mb-2" key={item+index} >
                                     <div className="card-body p-2">
                                         <a href={item.url}>
                                             <p className="m-0">{item.title}</p>
