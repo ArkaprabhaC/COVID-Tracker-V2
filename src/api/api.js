@@ -16,7 +16,6 @@ export const getCountries = async () => {
 /*TO CHANGE THE BELOW FUNCTION */
 export const getCountryHistory = async (country) => {
     const {data:{timeline}} = await axios.get(`https://corona.lmao.ninja/v2/historical/${country}`);
-    console.log(timeline);
     return timeline;
 }
 
