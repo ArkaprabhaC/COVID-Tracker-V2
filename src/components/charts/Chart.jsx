@@ -53,7 +53,7 @@ const Chart = (props) => {
 
     const barChart = (
             props.daily.cases ? 
-                (<div className="fadeUp" style={{animationDelay:"1.6s"}}>
+                (<div className="fadeUp mb-5" style={{animationDelay:"1.6s"}}>
                    
                     <div className="chart-container col-md-8 col-12 mx-auto" style={{height:"11rem"}}>
                         <p className="font-weight-light text-center" style={{fontSize:"20px"}}>Cumulative Infection Rate</p>
