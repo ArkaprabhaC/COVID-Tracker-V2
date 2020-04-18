@@ -34,11 +34,18 @@ class App extends React.Component{
             const data = await getCountryStats(country);
             const dailyData = await getCountryHistory(country);
             
-            this.setState({
-                stats:data,
-                daily: dailyData,
-                country: country
-            });
+            if(dailyData !== "404"){
+                this.setState({
+                    stats:data,
+                    daily: dailyData,
+                    country: country
+                });
+            }else{
+                this.setState({
+                    daily: {},
+                    country: country
+                });
+            }
         }
 
     }

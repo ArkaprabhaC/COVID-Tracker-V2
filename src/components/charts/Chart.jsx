@@ -115,7 +115,11 @@ const Chart = (props) => {
                     </div>
 
                   </div>
-                ) : null
+                ) : (
+                    <div className="fadeUp" style={{animationDelay:"1.6s"}}>
+                        <p className="text-center font-weight-light" style={{fontSize:"17px"}}>No historical data present for this country.</p>
+                    </div>
+                )
     );
 
     return (
