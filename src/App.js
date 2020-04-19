@@ -91,7 +91,7 @@ class App extends React.Component{
                          <News/>
                          <footer className="mt-3 footer">
                             <div className="container pt-3">
-                                <p className="text-center font-weight-light mb-4 footer-credits">By <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/arkaprabha-chatterjee-83483a167/"><span style={{"borderBottom":"3px solid #ffc107"}}>Arkaprabha Chatterjee</span></a></p>
+                                <p className="text-center font-weight-light mb-4 footer-credits">Made with <i style={{fontSize:"16px",color:"red"}} className="fas fa-heart"></i> by <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/arkaprabha-chatterjee-83483a167/"><span style={{"borderBottom":"3px solid #ffc107"}}>Arkaprabha Chatterjee</span></a></p>
                                 <p className="text-center font-weight-light mt-2 mb-0 call-for-devs-1">Want to improve this app? </p>
                                 <p className="text-center font-weight-light mt-1 call-for-devs-2">I would love to talk to you! </p>
                                 <p className="text-center font-weight-light mt-0">Drop a mail <a rel="noopener noreferrer" target="_blank" href="mailto:arkaprabha.chatterjee31@gmail.com">

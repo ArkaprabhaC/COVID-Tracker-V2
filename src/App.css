@@ -56,6 +56,40 @@ body{
   /*
   * Footer styles
   */
+  .footer-credits:hover{
+      cursor: pointer;
+  }
+  .footer-credits:hover .fa-heart{
+    -webkit-animation: pulsateHeart 1s infinite;
+    animation: pulsateHeart 1s infinite;
+  }
+  @keyframes pulsateHeart {
+    0%
+    {
+      transform: scale( .75 );
+    }
+    20%
+    {
+      transform: scale( 1 );
+    }
+    40%
+    {
+      transform: scale( .75 );
+    }
+    60%
+    {
+      transform: scale( 1 );
+    }
+    80%
+    {
+      transform: scale( .75 );
+    }
+    100%
+    {
+      transform: scale( .75 );
+    }
+
+  }
   .footer-credits a{
       color:inherit;
   }
