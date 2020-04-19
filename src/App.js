@@ -72,7 +72,7 @@ class App extends React.Component{
                             <div className="row fadeUp" style={{animationDelay:"1.5s"}}>
                                 <div className="col-8">
                                     <h2 className="text-left header-main font-weight-bold">
-                                        <span className="p-2">COVID-19</span>
+                                        <span className="p-2">COVID CANVAS</span>
                                     </h2>
                                 </div>
                                 <div className="col-4 text-muted text-right lastUpdated">
