@@ -22,9 +22,9 @@ class News extends React.Component {
    render(){
        return (
            <div>
-               <p className="news-header font-weight-light text-center" style={{fontSize: "18px"}}>Global News (source: BBC)</p>       
+               <p className="news-header font-weight-light text-center pt-4" style={{fontSize: "18px"}}>Global News (source: BBC)</p>       
                     {this.state.news.length !== 0 ? 
-                        this.state.news.slice(0,5).map((item,index)=>{
+                        this.state.news.slice(0,4).map((item,index)=>{
                             return (
                                 <a href={item.url} className="click-item" rel="noopener noreferrer" target="_blank" key={item+index}  >
                                     <div className="card card-news mb-2" >

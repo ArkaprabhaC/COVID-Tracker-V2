@@ -88,6 +88,7 @@ class App extends React.Component{
                     </div>
                     
                     <div className="col-md-4 col-12 stage-2 fadeUp" style={{animationDelay:"1.2s"}}>
+                       <div className="sticky-top"> 
                          <News/>
                          <footer className="mt-3 footer">
                             <div className="container pt-3">
@@ -98,6 +99,7 @@ class App extends React.Component{
                                     here</a></p>
                             </div>
                         </footer>
+                       </div>
                     </div>         
                 </div>
             </div> 

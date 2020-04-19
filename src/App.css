@@ -15,18 +15,8 @@ body{
     margin-top:20px
 }
 
-.stage-2{
-    position:fixed;
-    left:64%;
-    padding-top: 20px;
-}
-
-
-@media screen and (max-width:769px){
-    .stage-2{
-        position: relative;
-        left:0;
-    }
+.container-xl{
+    max-width: 1300px;
 }
 
 
